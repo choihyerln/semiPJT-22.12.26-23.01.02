@@ -15,7 +15,7 @@ import org.mindrot.jbcrypt.BCrypt;
 /**
  * Servlet implementation class test1
  */
-@WebServlet({"/constellation/test1", "/constellation/result1"})
+@WebServlet({"/constellation/main", "/constellation/result"})
 public class Constellation extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -26,9 +26,9 @@ public class Constellation extends HttpServlet {
 		
 		response.setContentType("text/html; charset=utf-8");
 		switch(action) {
-		case "test1":
+		case "main":
 			if (request.getMethod().equals("GET")) {
-				RequestDispatcher rd = request.getRequestDispatcher("/constellation/test1.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/view/constellation/main.jsp");
 				rd.forward(request, response);	
 				return;
 			} else {
@@ -65,12 +65,12 @@ public class Constellation extends HttpServlet {
 				}
 				//System.out.println(result);
 				request.setAttribute("result", result);
-				RequestDispatcher rd = request.getRequestDispatcher("/constellation/result1.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/view/constellation/result.jsp");
 				rd.forward(request, response);	
 				//System.out.println(action);
 				break;
 			}
-		case "result1":
+		case "result":
 			request.getAttribute(result);
 			break;
 		default:

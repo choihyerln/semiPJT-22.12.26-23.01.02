@@ -12,3 +12,10 @@ body {
     margin-right: auto;
     margin-bottom: 40px;
 }
+
+.card{
+    width:200px;
+    border-style: none;
+    background-color: white;
+    box-shadow: 20px 20px 20px -20px #b38fd544;
+}

@@ -1,4 +1,4 @@
-package factPok;
+package factpok;
 
 public class Factpok {
 	private int qNo;

@@ -1,6 +1,8 @@
 package taro;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -33,7 +35,7 @@ public class TaroController extends HttpServlet {
 		response.setContentType("text/html; charset=utf-8");
 		switch(action) {
 		case "main":
-			rd = request.getRequestDispatcher("/taro/main.jsp");
+			rd = request.getRequestDispatcher("/WEB-INF/view/taro/main.jsp");
 			rd.forward(request, response);	
 			break;
 		case "test":
@@ -51,7 +53,7 @@ public class TaroController extends HttpServlet {
 					taro = dao.getQuesInfo(qNo);
 					request.setAttribute("qNo", qNo);
 					request.setAttribute("taro", taro);
-					rd = request.getRequestDispatcher("/taro/test.jsp");
+					rd = request.getRequestDispatcher("/WEB-INF/view/taro/test.jsp");
 					rd.forward(request, response);	
 				}
 				
@@ -92,7 +94,7 @@ public class TaroController extends HttpServlet {
 				session.setAttribute("s3", s3);
 				session.setAttribute("s4", s4);
 				
-				System.out.println(qNo + ", " + op);
+				//System.out.println(qNo + ", " + op);
 				response.sendRedirect("/ncpl/taro/test?qNo=" + (qNo+1));
 
 			}
@@ -104,14 +106,14 @@ public class TaroController extends HttpServlet {
 			s3 = (Integer) session.getAttribute("s3");
 			s4 = (Integer) session.getAttribute("s4");
 			
-			System.out.println(s1 + ", " + s2 + ", " + s3 + ", " + s4);
+			//System.out.println(s1 + ", " + s2 + ", " + s3 + ", " + s4);
 			result = (s1 >= 0) ? "E" : "I";
 			result += (s2 >= 0) ? "S" : "N";
 			result += (s3 >= 0) ? "F" : "T";
 			result += (s4 >= 0) ? "P" : "J";
 			
 			request.setAttribute("result", result);
-			rd = request.getRequestDispatcher("/taro/result.jsp");
+			rd = request.getRequestDispatcher("/WEB-INF/view/taro/result.jsp");
 			rd.forward(request, response);
 			
 			break;
@@ -120,3 +122,6 @@ public class TaroController extends HttpServlet {
 		}
 	}
 }
+
+
+
