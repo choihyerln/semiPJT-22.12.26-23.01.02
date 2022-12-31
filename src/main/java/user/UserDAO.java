@@ -31,7 +31,7 @@ public class UserDAO {
 	
 	public void deleteUser(String uid) {
 		Connection conn = getConnection();
-		String sql = "UPDATE ncplUsers SET isDeleted=1 WHERE uid=?;";
+		String sql = "UPDATE users SET isDeleted=1 WHERE uid=?;";
 		try {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, uid);
@@ -45,7 +45,7 @@ public class UserDAO {
 	
 	public void updateUser(User u) {
 		Connection conn = getConnection();
-		String sql = "UPDATE ncplUsers SET uname=?, email=? WHERE uid=?;";
+		String sql = "UPDATE users SET uname=?, email=? WHERE uid=?;";
 		try {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, u.getUname());
@@ -61,7 +61,7 @@ public class UserDAO {
 	
 	public void updateUserWithPassword(User u) {
 		Connection conn = getConnection();
-		String sql = "UPDATE ncplUsers SET pwd=?, uname=?, email=? WHERE uid=?;";
+		String sql = "UPDATE users SET pwd=?, uname=?, email=? WHERE uid=?;";
 		try {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			String cryptedPwd = BCrypt.hashpw(u.getPwd(), BCrypt.gensalt());
@@ -79,7 +79,7 @@ public class UserDAO {
 	
 	public User getUserInfo(String uid) {
 		Connection conn = getConnection();
-		String sql = "SELECT * FROM ncplUsers WHERE uid=?;";
+		String sql = "SELECT * FROM users WHERE uid=?;";
 		User u = new User();
 		try {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
@@ -131,7 +131,7 @@ public class UserDAO {
 	public User UserPage(String uid) {
 		User user = new User();
 		Connection conn = getConnection();
-		String sql = "SELECT * FROM ncplUsers WHERE uid=?;";
+		String sql = "SELECT * FROM users WHERE uid=?;";
 		try {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, uid);
@@ -152,7 +152,7 @@ public class UserDAO {
 	
 	public List<User> listUser(String uid){
 		Connection conn = getConnection();
-		String sql = "SELECT uid, uname, email, regDate FROM ncplUsers WHERE uid=?;";
+		String sql = "SELECT uid, uname, email, regDate FROM users WHERE uid=?;";
 		List<User> list = new ArrayList<>();
 		try {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
@@ -180,7 +180,7 @@ public class UserDAO {
 	
 	public void registerUser(User u) {
 		Connection conn = getConnection();
-		String sql = "INSERT INTO ncplUsers VALUES (?, ?, ?, ?, DEFAULT, DEFAULT);";
+		String sql = "INSERT INTO users VALUES (?, ?, ?, ?, DEFAULT, DEFAULT);";
 		try {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, u.getUid());
@@ -199,7 +199,7 @@ public class UserDAO {
 
 	public int getUserCount() {
 		Connection conn = getConnection();
-		String sql = "SELECT COUNT(uid) FROM ncplUsers WHERE isDeleted=0;";
+		String sql = "SELECT COUNT(uid) FROM users WHERE isDeleted=0;";
 		int count = 0;
 		try {
 			Statement stmt = conn.createStatement();

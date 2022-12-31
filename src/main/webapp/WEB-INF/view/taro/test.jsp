@@ -20,7 +20,7 @@
 	<form action="/ncpl/taro/test" method="post">
 		<input class="name" type="hidden" name="qNo" value="${qNo}">
 		<div class="progress">
-    		<div class="value"></div>
+    		<div class="value" style="width:${progress}%"></div>
   		</div>
 		<div class="question-box">
 	 	 	<div class="question">${taro.content}</div>

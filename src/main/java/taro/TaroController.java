@@ -51,6 +51,7 @@ public class TaroController extends HttpServlet {
 					response.sendRedirect("/ncpl/taro/result");
 				} else {
 					taro = dao.getQuesInfo(qNo);
+					request.setAttribute("progress", (qNo-1) * 100 / 12);
 					request.setAttribute("qNo", qNo);
 					request.setAttribute("taro", taro);
 					rd = request.getRequestDispatcher("/WEB-INF/view/taro/test.jsp");

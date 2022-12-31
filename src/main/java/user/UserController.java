@@ -36,7 +36,7 @@ public class UserController extends HttpServlet {
 		RequestDispatcher rd = null;
 		switch(action) {
 		case "delist":
-			uid = ((String)session.getAttribute("loginUser")).getUid();
+			uid = ((String)session.getAttribute("loginUser"));
 			request.setAttribute("user", user);
 			rd = request.getRequestDispatcher("/WEB-INF/view/user/delist.jsp");
 			rd.forward(request, response);

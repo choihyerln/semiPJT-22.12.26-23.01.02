@@ -8,9 +8,9 @@
     <link rel="icon" href="favicon.png">    <!-- favicon 탭창 옆에 아이콘 그림 표시  ico 파일로 열리지 않으면 png로 링크 걸어주기 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">      <!--브라우저의 기본 스타일을 초기화 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" /> <!-- 웹 폰트 Pretendard -->
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/home.css">
-    <script defer src="../js/share.js"></script>
+    <link rel="stylesheet" href="/ncpl/css/common.css">
+    <link rel="stylesheet" href="/ncpl/css/home.css">
+    <script defer src="/ncpl/js/share.js"></script>
 </head>
 <body>
 	<%@ include file="../common/top.jsp" %>

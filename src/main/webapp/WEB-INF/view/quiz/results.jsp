@@ -9,9 +9,9 @@
 	<link rel="icon" href="favicon.png">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
 	<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" />
-	<link rel="stylesheet" href="../css/common.css">
-	<link rel="stylesheet" href="../css/results.css">
-	<script defer src="../js/share2.js"></script>
+	<link rel="stylesheet" href="/ncpl/css/common.css">
+	<link rel="stylesheet" href="/ncpl/css/results.css">
+	<script defer src="/ncpl/js/share2.js"></script>
 	<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 	<script>
         Kakao.init('65c26112bae4d5f27cc617be7d942350');  
