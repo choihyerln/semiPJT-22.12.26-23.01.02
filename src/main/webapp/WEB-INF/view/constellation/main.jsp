@@ -11,9 +11,9 @@
     <link rel="icon" href="favicon.png">    <!-- favicon 탭창 옆에 아이콘 그림 표시  ico 파일로 열리지 않으면 png로 링크 걸어주기 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">      <!--브라우저의 기본 스타일을 초기화 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" /> <!-- 웹 폰트 Pretendard -->
-    <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/home.css">
-    <script defer src="../js/share.js"></script>
+    <link rel="stylesheet" href="/ncpl/css/common.css">
+    <link rel="stylesheet" href="/ncpl/css/home.css">
+    <script defer src="/ncpl/js/share.js"></script>
 </head>
 <body style="margin:40px">
 	<%@ include file="../common/top.jsp" %>
@@ -24,12 +24,10 @@
    		<h1 class="page-title">
         	별자리 테스트<br>
         </h1>
-        <img src="../img/별자리 테스트_메인.jpeg" alt="캐릭터" class="character">
-        <div class="card justify-content-center">
-			<div class="card-body">	
-				<input type="number" name="month" placeholder="태어난 달을 입력하세요."><br>
-				<input type="number" name="day" placeholder="태어난 일을 입력하세요.">
-			</div>
+        <img src="/ncpl/img/별자리 테스트_메인.jpeg" alt="캐릭터" class="character">
+        <div class="card">
+			<input class="box" type="number" name="month" placeholder="태어난 달을 입력하세요."><br>
+			<input class="box" type="number" name="day" placeholder="태어난 일을 입력하세요.">
 		</div>
 		<input type="hidden" name="result">
 		<input type="submit" value="결과 보기" class="btn btn-orange">

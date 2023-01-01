@@ -13,9 +13,25 @@ body {
     margin-bottom: 40px;
 }
 
-.card{
+.card {
     width:200px;
     border-style: none;
-    background-color: white;
     box-shadow: 20px 20px 20px -20px #b38fd544;
+
 }
+
+/* .box {
+    font-weight: bold;
+    font-style: oblique;
+    border-radius: 120px;
+    font-size: 22px;
+} */
+
+input::placeholder {
+    color: red;
+    font-style: italic;
+  }
+  textarea::placeholder {
+    color: blue;
+    font-weight: bold;
+  }
