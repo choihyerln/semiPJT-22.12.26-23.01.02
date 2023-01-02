@@ -36,9 +36,10 @@ public class UserController extends HttpServlet {
 		RequestDispatcher rd = null;
 		switch(action) {
 		case "delist":
-			uid = ((String)session.getAttribute("loginUser"));
-			request.setAttribute("user", user);
-			rd = request.getRequestDispatcher("/WEB-INF/view/user/delist.jsp");
+			uid = request.getParameter("uid");
+			List<User> list = dao.listUsers();
+			request.setAttribute("userList", list);
+			rd = request.getRequestDispatcher("/WEB-INF/view/user/delist.jsp?uid=" + uid);
 			rd.forward(request, response);
 			break;
 		case "login":
@@ -149,5 +150,4 @@ public class UserController extends HttpServlet {
 			System.out.println(request.getMethod() + " 잘못된 경로");
 		}
 	}
-
 }

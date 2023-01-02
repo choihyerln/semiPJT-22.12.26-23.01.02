@@ -6,13 +6,13 @@
 		<ul class="navbar-nav">
 		<img src="../img/Logo.png" alt="Logo" style="height:50px;" class="rounded-3 ms-3 me-3">
 			<li class="nav-item">
-				<a class="nav-link" href="/ncpl/quiz/choice"><i class="fa-solid fa-house"></i> Home</a>
+				<a class="nav-link" href="/ncpl/quiz/choice"><i class="fa-solid fa-house"></i>테스트 Home</a>
 			</li>
 			<li class="nav-item ms-3">
-				<a class="nav-link ${(menu eq 'board') ? "active" : ''}" href="/ncpl/board/list?p=1&f=&q="><i class="far fa-list-alt"></i> 게시판</a>
+				<a class="nav-link" href="/ncpl/board/list?p=1&f=&q="><i class="far fa-list-alt"></i> 게시판</a>
 			</li>
 			<li class="nav-item ms-3">
-				<a class="nav-link ${(menu eq 'user') ? "active" : ''}" href="/ncpl/user/delist"><i class="fas fa-user-friends"></i> my page</a>
+				<a class="nav-link" href="/ncpl/user/delist?uid=${uid}"><i class="fas fa-user-friends"></i> my page</a>
 			</li>
 			<li class="nav-item ms-3">
 				<c:if test="${not empty uid}">

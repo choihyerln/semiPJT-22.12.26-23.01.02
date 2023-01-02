@@ -123,6 +123,3 @@ public class TaroController extends HttpServlet {
 		}
 	}
 }
-
-
-

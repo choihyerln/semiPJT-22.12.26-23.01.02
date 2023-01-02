@@ -5,17 +5,14 @@
 <head>
     <%@ include file="../common/heading.jsp" %>
 </head>
-
 <body>
 	<%@ include file="../common/top2.jsp" %>
     <!-- =================== main =================== -->
-    <div class="container">
-	<div class="row">
-		<div class="col-2"></div>          
-			<div class="col-8 justify-content-center">
-            <div class="card">
-				<div class="card-body">
-            	<h3><strong>회원 가입</strong></h3>
+<div class="container">	 
+		<div class="row">
+		<h1 class="page-title" style="margin-top: 150px;">&#128195;회원가입&#128195;</h1>
+				<div class="box" >
+					<h4 class="page-subtitle">회원 정보 입력</h4>
             	<hr>
 		            <form action="/ncpl/user/register" method="post">
 		                <table class="table table-borderless" >
@@ -41,18 +38,15 @@
 		                    </tr>
 		                    <tr>
 		                        <td colspan="2" style="text-align: center;">
-		                            <input class="btn" type="submit" id="OKbtn" value="제출">
-		                            <input class="btn btn-secondary" type="reset" value="취소">
+		                            <input class="btn btn-green" type="submit" id="OKbtn" value="&emsp;&emsp;&emsp;제출&emsp;&emsp;&emsp;">
+		                            <input class="btn btn-gray" type="reset" value="&emsp;&emsp;&emsp;취소&emsp;&emsp;&emsp;">
 		                        </td>
 		                    </tr>
 		                </table>
 		            </form>
 			        </div>
-			        <div class="col-2"></div>
 			    </div>
             </div>
-        </div>
-	</div>
     <%@ include file="../common/bottom.jsp" %>
 </body>
 </html>

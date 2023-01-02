@@ -32,8 +32,8 @@ public class ReplyDAO {
 	public List<Reply> getReplies(int bid) {
 		Connection conn = getConnection();
 		String sql = "SELECT r.rid, r.content, r.regDate, r.isMine, r.uid, r.bid, u.uname"
-				+ "	FROM ncplReply AS r"
-				+ "	JOIN ncplUsers AS u"
+				+ "	FROM reply AS r"
+				+ "	JOIN users AS u"
 				+ "	ON r.uid=u.uid"
 				+ "	WHERE bid=?;";
 		List<Reply> list = new ArrayList<>();
@@ -65,7 +65,7 @@ public class ReplyDAO {
 
 public void insert(Reply r) {
 	Connection conn = getConnection();
-	String sql = "INSERT INTO ncplReply(content, isMine, uid, bid) VALUES (?, ?, ?, ?);";
+	String sql = "INSERT INTO reply(content, isMine, uid, bid) VALUES (?, ?, ?, ?);";
 	try {
 		PreparedStatement pStmt = conn.prepareStatement(sql);
 		pStmt.setString(1, r.getContent());

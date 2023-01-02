@@ -13,5 +13,5 @@
     <!-- 아이콘 -->
     <script src="https://kit.fontawesome.com/77ad8525ff.js" crossorigin="anonymous"></script>
 	<!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../css/style.css" >
+    <link rel="stylesheet" type="text/css" href="/ncpl/css/common.css" >
     

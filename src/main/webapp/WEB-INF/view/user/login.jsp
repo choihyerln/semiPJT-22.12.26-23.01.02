@@ -11,29 +11,27 @@
     <!-- =================== main =================== -->
 	<div class="container">	 
 		<div class="row">
-		<div class="col-2"></div>          
-			<div class="col-8 justify-content-center">
-				<div class="card">
-					<div class="card-body" id="jBC">
-					<h4 class="card-title">로그인</h4>
-					<p class="card-text">다양한 심리테스트를 즐기기 위해 로그인 해주세요!</p>
+		<h1 class="page-title" style="margin-top: 150px;">WELCOME!</h1>
+				<div class="box" >
+					<h4 class="page-subtitle">로그인</h4>
+					<p id="midP">다양한 심리테스트를 즐기기 위해 로그인 해주세요!</p>
 						<form action="/ncpl/user/login" method="post">
 							 <table class="table table-borderless">
 		                        <tr>
-		                            <td><label for="uid" class="col-form-label">아이디</label></td>
+		                            <td><label for="uid" class="col-form-label" id="midP">아이디: </label></td>
 		                            <td><input type="text" name="uid" id="uid" class="form-control" placeholder="아이디"></td>
 		                        </tr>
 		                        <tr>
 		                        	<td></td>
 		                        </tr>
 		                        <tr>
-		                            <td><label for="pwd" class="col-form-label">패스워드</label></td>
+		                            <td><label for="pwd" class="col-form-label" id="midP">패스워드: </label></td>
 		                            <td><input type="password" name="pwd" id="pwd" class="form-control" placeholder="패스워드"></td>
 		                        </tr>
 		                        <tr>
 		                            <td colspan="2" style="text-align: center;">
-		                                <input class="btn btn-primary" type="submit" value="로그인">
-		                                <input class="btn btn-secondary" type="reset" value="취소">
+		                                <input class="btn btn-green" type="submit" value="&emsp;&emsp;로그인&emsp;&emsp;">
+		                                <input class="btn btn-gray" type="reset" value="&emsp;&emsp;취소&emsp;&emsp;">
 		                            </td>
 		                        </tr>
 		                    </table>
@@ -42,9 +40,7 @@
 					</div>
 				</div>
 			</div>
-		<div class="col-2"></div>
-		</div>
-	</div> 
+
 	<!-- =================== main =================== -->
     <%@ include file="../common/bottom.jsp" %>
 </body>

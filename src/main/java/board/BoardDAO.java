@@ -33,8 +33,8 @@ public class BoardDAO {
 		Connection conn = getConnection();
 		int offset = (page - 1) * 10;
 		String sql = "SELECT b.bid, b.uid, b.title, b.modTime, "
-				+ "	b.viewCount, b.replyCount, u.uname FROM ncplBoard AS b"
-				+ "	JOIN ncplUsers AS u"
+				+ "	b.viewCount, b.replyCount, u.uname FROM board AS b"
+				+ "	JOIN users AS u"
 				+ "	ON b.uid=u.uid"
 				+ "	WHERE b.isDeleted=0 AND " + field + " LIKE ?"
 				+ "	ORDER BY bid DESC"
@@ -67,7 +67,7 @@ public class BoardDAO {
 	//
 	public int getBoardCount(String field, String query) {
 		Connection conn = getConnection();
-		String sql = "SELECT COUNT(bid) FROM ncplBoard AS b"
+		String sql = "SELECT COUNT(bid) FROM board AS b"
 				+ "	JOIN users AS u"
 				+ "	ON b.uid=u.uid"
 				+ "	WHERE b.isDeleted=0 AND " + field + " LIKE ?;";
@@ -89,7 +89,7 @@ public class BoardDAO {
 	//게시글 작성
 	public void insertBoard(Board b) {
 		Connection conn = getConnection();
-		String sql = "INSERT INTO ncplBoard(uid, title, content, files) VALUES (?, ?, ?, ?);";
+		String sql = "INSERT INTO board(uid, title, content, files) VALUES (?, ?, ?, ?);";
 		try {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setString(1, b.getUid());
@@ -97,7 +97,7 @@ public class BoardDAO {
 			pStmt.setString(3, b.getContent());
 			pStmt.setString(4, b.getFiles());
 			
-			pStmt.executeUpdate();
+			pStmt.executeUpdate(); 
 			pStmt.close();
 			conn.close();
 		} catch (Exception e) {
@@ -108,7 +108,7 @@ public class BoardDAO {
 	public Board getBoardDetail(int bid) {
 		Connection conn = getConnection();
 		String sql = "SELECT b.bid, b.uid, b.title, b.content, b.modTime, b.viewCount,"
-				+ "	b.replyCount, b.files, u.uname FROM ncplBoard AS b"
+				+ "	b.replyCount, b.files, u.uname FROM board AS b"
 				+ "	JOIN users AS u"
 				+ "	ON b.uid=u.uid"
 				+ "	WHERE b.bid=?";
@@ -140,7 +140,7 @@ public class BoardDAO {
 	//조회수 증가 기능
 	public void increaseViewCount(int bid) {
 		Connection conn = getConnection();
-		String sql = "UPDATE ncplBoard SET viewCount=viewCount+1 WHERE bid=?;";
+		String sql = "UPDATE board SET viewCount=viewCount+1 WHERE bid=?;";
 		try {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setInt(1, bid);
@@ -156,7 +156,7 @@ public class BoardDAO {
 	//댓글 수 증가 기능
 	public void increaseReplyCount(int bid) {
 		Connection conn = getConnection();
-		String sql = "UPDATE ncplBoard SET replyCount=replyCount+1 WHERE bid=?;";
+		String sql = "UPDATE board SET replyCount=replyCount+1 WHERE bid=?;";
 		try {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setInt(1, bid);
@@ -172,7 +172,7 @@ public class BoardDAO {
 	//게시글 지우기 기능
 	public void deleteBoard(int bid) {
 		Connection conn = getConnection();
-		String sql = "UPDATE ncplBoard SET isDeleted=1 WHERE bid=?;";
+		String sql = "UPDATE board SET isDeleted=1 WHERE bid=?;";
 		try {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setInt(1, bid);
@@ -187,7 +187,7 @@ public class BoardDAO {
 
 	public void updateBoard(Board b) {
 		Connection conn = getConnection();
-		String sql = "UPDATE ncplBoard SET title=?, content=?, "
+		String sql = "UPDATE board SET title=?, content=?, "
 				   + " modTime=NOW(), files=? WHERE bid=?;";
 		try {
 			PreparedStatement pStmt = conn.prepareStatement(sql);

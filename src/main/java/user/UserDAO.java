@@ -128,6 +128,33 @@ public class UserDAO {
 		return list;
 	}
 */	
+	public List<User> listUsers(){
+		Connection conn = getConnection();
+		String sql = "SELECT * FROM users ORDER BY regDate, uid;";
+		List<User> list = new ArrayList<>();
+		try {
+			Statement stmt = conn.createStatement();	
+			ResultSet rs = stmt.executeQuery(sql);
+			
+			while (rs.next()) {
+				User u = new User();
+				u.setUid(rs.getString(1));
+				u.setPwd(rs.getString(2));
+				u.setUname(rs.getString(3));
+				u.setEmail(rs.getString(4));
+				u.setRegDate(LocalDate.parse(rs.getString(5)));
+				
+				list.add(u);
+			}
+			rs.close();
+			stmt.close();
+			conn.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return list;
+	}
+	
 	public User UserPage(String uid) {
 		User user = new User();
 		Connection conn = getConnection();
@@ -215,6 +242,3 @@ public class UserDAO {
 		return count;
 	}
 }
-
-
-

@@ -5,24 +5,19 @@
 <html>
 <head>
     <%@ include file="../common/heading.jsp" %>
+    <style>
+    body{
+    background-color: rgb(245, 246, 248);
+	}
+    </style>
 </head>
-
 <body>
 	<%@ include file="../common/top2.jsp" %>
 	
     <div class="container" style="margin-top: 300px;">
         <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <h3>
-                    <strong>에러 페이지</strong>
-                </h3>
-                <hr>
-                <h1>요청한 페이지는 존재하지 않습니다.</h1>
-            </div>
-            <div class="col-4"></div>
+        <img alt="error404" src="/ncpl/img/404 image.jpg">
         </div>
     </div>
-
     <%@ include file="../common/bottom.jsp" %>
 </body>

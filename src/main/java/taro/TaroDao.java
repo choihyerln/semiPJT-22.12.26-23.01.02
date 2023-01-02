@@ -67,7 +67,6 @@ public class TaroDao {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
 		return taro;
 	}
 }

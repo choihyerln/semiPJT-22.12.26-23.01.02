@@ -10,9 +10,9 @@
     <link rel="icon" href="">    <!-- favicon 탭창 옆에 아이콘 그림 표시  ico 파일로 열리지 않으면 png로 링크 걸어주기 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">      <!--브라우저의 기본 스타일을 초기화 -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/variable/pretendardvariable-dynamic-subset.css" /> <!-- 웹 폰트 Pretendard -->
-    <link rel="stylesheet" href="../css/common.css">
-	<link rel="stylesheet" href="../css/questions.css">
-	<script type="module" defer src="../js/questions.js"></script>
+    <link rel="stylesheet" href="/ncpl/css/common.css">
+	<link rel="stylesheet" href="/ncpl/css/questions.css">
+	<script type="module" defer src="/ncpl/js/questions.js"></script>
 </head>
 <body>
 	<%@ include file="../common/top.jsp" %>
@@ -23,7 +23,7 @@
     		<div class="value" style="width:${progress}%"></div>
   		</div>
 		<div class="question-box">
-	 	 	<div class="question">${taro.content}</div>
+	 	 	<div class="question"><br><br><br>${taro.content}<br><br><br></div>
 	 		<button class="btn btn-gray choice choice1" type="submit" name="op" value="ans1">${taro.ans1}</button>
 	 	 	<button class="btn btn-gray choice choice2" type="submit" name="op" value="ans2">${taro.ans2}</button>
 		</div>

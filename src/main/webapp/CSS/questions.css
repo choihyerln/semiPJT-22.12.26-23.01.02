@@ -1,8 +1,4 @@
-body {
-    background-image: url("질문화면 배경이미지");
-    background-position: top center;
-    background-repeat: no-repeat;
-  }
+
   .progress {
     max-width: 500px;
     height: 20px;
@@ -19,8 +15,10 @@ body {
     border-radius: 10px;
     transition: 0.2s;
   }
+   /* 테스트 질문 박스 */
   .question-box {
     max-width: 420px;
+    min-height: 700px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 60px;
@@ -31,6 +29,7 @@ body {
     box-shadow: 0 4px 25px #DDE2E8;
     background-color: #FFFFFF;
   }
+  /* 테스트 질문 번호, 미사용 */
   .question-box .number {
     margin-bottom: 30px;
     font-weight: 900;
@@ -38,16 +37,20 @@ body {
     text-align: center;
     color: #2EC7A6;
   }
+
+  /* 테스트 질문 */
   .question-box .question {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     font-weight: 700;
     font-size: 30px;
     line-height: 1.5;
     text-align: center;
   }
+  /* 테스트 질문 선택버튼 */
   .question-box .choice {
     border-radius: 120px;
     font-size: 22px;
+    min-width: 300px;
   }
 
   @media (max-width:640px) {

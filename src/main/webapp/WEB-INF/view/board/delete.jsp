@@ -12,35 +12,22 @@
 <body>
     <%@ include file="../common/top.jsp" %>
 
-    <div class="container" style="margin-top: 80px;">
-        <div class="row">
-            
-            <!-- =================== main =================== -->
-            <div class="col-sm-9">
-            	<h3><strong>게시글 삭제</strong></h3>
+	<div class="container">
+		<div class="row mt-5 mb-5">			
+		<div class="card" style="padding:30px;">
+		<!-- =================== main =================== -->
+			<h3 class="card-title"><strong>게시글 삭제</strong></h3>
             	<hr>
-                <div class="row">
-			        <div class="col-3"></div>
-			        <div class="col-6">
-						<div class="card border-warning mt-3">
-			                <div class="card-body">
-			                    <strong class="card-title">정말로 삭제하시겠습니까?</strong>
-			                    <p class="card-text text-center">
-			                        <br>
-			                        <button class="btn btn-primary" onclick="location.href='/ncpl/board/deleteConfirm?bid=${param.bid}'">삭제</button>
-			                        <button class="btn btn-secondary" onclick="location.href='/ncpl/board/list?p=${currentBoardPage}&f=&q='">취소</button>
-			                    </p>
-			                </div>
-			            </div>			            
-			        </div>
-			        <div class="col-3"></div>
-			    </div>
-            </div>
+                 <p id="warnP">정말로 삭제하시겠습니까?</p>
+                 <p class="card-text text-center">
+                     <br>
+                     <button class="btn btn-green" onclick="location.href='/ncpl/board/deleteConfirm?bid=${param.bid}'">&emsp;&emsp;삭제&emsp;&emsp;</button>
+                     <button class="btn btn-gray" onclick="location.href='/ncpl/board/list?p=${currentBoardPage}&f=&q='">&emsp;&emsp;취소&emsp;&emsp;</button>
+                 </p>
+	        </div>
+	    </div>			            
+	</div>
             <!-- =================== main =================== -->
-            
-        </div>
-    </div>
-
     <%@ include file="../common/bottom.jsp" %>
 </body>
 </html>

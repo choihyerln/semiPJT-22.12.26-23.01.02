@@ -18,19 +18,19 @@
 		}
     </script>
 </head>
-
-<body style="height: 2000px">
+<body>
     <%@ include file="../common/top.jsp" %>
 
-    <div class="container">
-		<div class="row">
-			<div class="col-1"></div>			
-			<!-- =================== main =================== -->
-				<div class="col-10">		
-                <table class="table table-sm table-borderless">
+	<!-- =================== main =================== -->
+	<div class="container-fluid">
+		<div class="row mt-5 mb-5">
+		<div class="col-1"></div>
+		<div class="col-10">
+		<div class="card" style="padding:30px;">			
+                <table class="table table-borderless">
                    <tr class="d-flex">
                        <td class="col-6" style="text-align: left;">
-                           <h3><strong>게시글 목록</strong>
+                           <h3 class="page-small-subtitle"><strong>게시글 목록&#128194;</strong>
                                <span style="font-size: 0.6em;">
                                    <a href="/ncpl/board/write" class="ms-5"><i class="far fa-file-alt"></i> 글쓰기</a>
                                </span>
@@ -47,13 +47,13 @@
                            <input class="form-control me-2" type="search" placeholder="검색 내용" name="q" id="query">
                        </td>
                        <td class="col-1">
-                           <button class="btn btn-outline-primary" onclick="search()">검색</button>
+                           <button class="btn btn-green btn-mini" onclick="search()">  검색  </button>
                        </td>
                    </tr>
                 </table>
                 <hr>
                 <table class="table mt-2">
-                    <tr class="table-secondary ">
+                    <tr class="table" id="bgc1">
                         <th class="col-1">번호</th>
                         <th class="col-6">제목</th>
                         <th class="col-2">글쓴이</th>
@@ -103,10 +103,11 @@
                 </c:if>
                 </ul>
             </div>
-            <!-- =================== main =================== -->
-            
+            </div>
+            <div class="col-1"></div>			
         </div>
     </div>
+	<!-- =================== main =================== -->
 
     <%@ include file="../common/bottom.jsp" %>
 </body>
