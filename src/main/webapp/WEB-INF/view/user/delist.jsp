@@ -59,7 +59,7 @@
 							<td class="col-2">${user.regDate}</td>
 						</tr>
 					</table>
-					<br><br><br><br><br><br><br><br><br>
+					<br><br><br><br>
 					</c:if>
 					<span style="font-size: 1.0em;">
                          <c:if test="${uid eq user.uid}">
