@@ -1,8 +1,8 @@
-# [  :blue_heart:다양한 심리테스트가 가능한 홈페이지  ]
+# [  다양한 심리테스트가 가능한 홈페이지  ]
 
-Semi-project(22.12.28~23.01.02)
+:blue_heart: Semi-project(22.12.28~23.01.02)
 
-[멀티잇] 웹 서비스 개발자 취업캠프 (Java) 과정
+:briefcase: [멀티잇] 웹 서비스 개발자 취업캠프 (Java) 과정
 
 멀티캠퍼스에서 2022.10 ~ 2023.3 동안 진행됩니다. <br>
 (구 과정명: AI 플랫폼을 활용한 웹 서비스 개발 과정)
@@ -32,14 +32,14 @@ Front-end
 -	Eclipse 또는 Visual Studio Code를 활용한 코드 작성
 -	HTML, CSS, JavaScript 활용하여 인터페이스 구현
 
-## ✔ A detailed description of the project is provided in the PDF below.
-[프로젝트 기능 설명 report.pdf](https://drive.google.com/file/d/1qfqisSgEQ3dSQv9FJoxNlUuxeyXeGnLG/view?usp=share_link)
-
 ## ✔ Team
 FE : [박효은](https://github.com/glaciar-pp)<br>
 BE : [노진희](https://github.com/znhee)<br>
 BE : [최혜린](https://github.com/choihyerln)
 자료 : https://ktestone.com/
+
+## ✔ A detailed description of the project is provided in the PDF below.
+[프로젝트 기능 설명 report.pdf](https://drive.google.com/file/d/1qfqisSgEQ3dSQv9FJoxNlUuxeyXeGnLG/view?usp=share_link)
 
 ## ✔ Video
 [프로젝트 시현 영상](https://drive.google.com/file/d/1UNXhh3P8-S2bEH-kccqcNNkrTSPETptr/view)
