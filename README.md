@@ -34,8 +34,7 @@ Front-end
 
 ## ✔ Team
 FE : [박효은](https://github.com/glaciar-pp)<br>
-BE : [노진희](https://github.com/znhee)<br>
-BE : [최혜린](https://github.com/choihyerln)
+BE : [노진희](https://github.com/znhee) [최혜린](https://github.com/choihyerln)<br>
 자료 : https://ktestone.com/
 
 ## ✔ A detailed description of the project is provided in the PDF below.
