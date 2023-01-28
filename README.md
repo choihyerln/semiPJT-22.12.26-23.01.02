@@ -1,4 +1,4 @@
-# <span style="background-color: #F7DDBE">다양한 심리테스트 사이트</span>
+# 다양한 심리테스트 사이트
 
 :blue_heart: Semi-project(22.12.28~23.01.02)
 
