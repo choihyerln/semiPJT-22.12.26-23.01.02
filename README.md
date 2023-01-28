@@ -1,4 +1,4 @@
-# [  다양한 심리테스트가 가능한 홈페이지  ]
+# <span style="background-color: #F7DDBE">다양한 심리테스트 사이트</span>
 
 :blue_heart: Semi-project(22.12.28~23.01.02)
 
@@ -35,7 +35,7 @@ Front-end
 ## ✔ Team
 FE : [박효은](https://github.com/glaciar-pp)<br>
 BE : [노진희](https://github.com/znhee) [최혜린](https://github.com/choihyerln)<br>
-자료 : https://ktestone.com/
+출처 : https://ktestone.com/
 
 ## ✔ A detailed description of the project is provided in the PDF below.
 [프로젝트 기능 설명 report.pdf](https://drive.google.com/file/d/1qfqisSgEQ3dSQv9FJoxNlUuxeyXeGnLG/view?usp=share_link)
