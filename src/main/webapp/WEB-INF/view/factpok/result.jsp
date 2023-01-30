@@ -83,7 +83,6 @@
 		<a href="/ncpl/quiz/choice" class="btn btn-gray btn-small">
 		다른 테스트하러 가기 
 		</a>
-	</div>
  
 	<div class="btn btn-orange btn-small" onclick="js:kakaoShare()">
 		카카오톡으로 공유하기
